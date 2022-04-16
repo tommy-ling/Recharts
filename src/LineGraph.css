@@ -1,0 +1,20 @@
+.recharts-legend-wrapper .recharts-default-legend .recharts-legend-item {
+  cursor: pointer;
+}
+
+.recharts-legend-wrapper .recharts-default-legend .recharts-legend-item:hover {
+  opacity: 0.5;
+}
+
+.LineGraph-custom-tooltip {
+  margin: 0px;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(204, 204, 204);
+  white-space: nowrap;
+}
+
+.LineGraph-custom-vendor {
+  padding: 0px;
+  margin: 0px
+}
