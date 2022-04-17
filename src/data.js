@@ -1,4 +1,4 @@
-const vendorData = [
+const vmExampleData = [
   {
     name: '10am',
     vendor1: 4000,
@@ -106,9 +106,37 @@ const vendorData = [
   },
 ];
 
-const allData = vendorData.map(data => ({
+const allData = vmExampleData.map(data => ({
   name: data.name,
   All_Vendors: Object.values(data).reduce((init, val) => (typeof(val) === 'number' ? init + val : init), 0)
 }))
 
-export { vendorData, allData }
+const vmSoldByItem = [
+  {item1: {
+    price: 25,
+    qty: 300,
+    vendorId: 1
+  }},
+  {item1: {
+    price: 25,
+    qty: 300
+  }},
+  {item1: {
+    price: 25,
+    qty: 300
+  }},
+  {item1: {
+    price: 25,
+    qty: 300
+  }},
+  {item1: {
+    price: 25,
+    qty: 300
+  }},
+  {item1: {
+    price: 25,
+    qty: 300
+  }},
+]
+
+export { vmExampleData, allData }

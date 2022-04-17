@@ -9,3 +9,8 @@
   width: 4.5rem;
   border-radius: 10px;
 }
+
+.LineGraphs-filter button:hover {
+  background-color: #93e6d3;
+  cursor: pointer;
+}
