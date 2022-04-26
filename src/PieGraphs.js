@@ -22,28 +22,26 @@ class PieGraphs extends Component {
     this.setState({...this.state.items, indVdrOn: false})
   }
   render() {
+    const vdrId = this.state.items.map(item => 
+      Object.values(item)[0].vendorId
+      ).filter((id, idx, arr) => 
+      arr.indexOf(id) === idx
+      ).sort((a,b) => a - b)
+
     return (
       <div className='PieGraphs'>
         <Select 
-          value="All"
-          onChange={this.changeToVendor}
-          style={{backgroundColor: '#d7e1ee', borderRadius: '15px', height: '30px'}}
-        >
-          <MenuItem value={1}>1</MenuItem>
-          <MenuItem value={2}>2</MenuItem>
-          <MenuItem value={3}>3</MenuItem>
-          <MenuItem value={4}>4</MenuItem>
-          <MenuItem value={5}>5</MenuItem>
-          <MenuItem value={6}>6</MenuItem>
-          <MenuItem value={7}>7</MenuItem>
-          <MenuItem value={8}>8</MenuItem>
-          <MenuItem value={9}>9</MenuItem>
-          <MenuItem value={10}>10</MenuItem>
-          <MenuItem value={11}>11</MenuItem>
-          <MenuItem value={12}>12</MenuItem>
+        value="All"
+        onChange={this.changeToVendor}
+        style={{backgroundColor: '#d7e1ee', borderRadius: '15px', height: '30px'}}>
+          {vdrId.map(id => {
+            return (
+              <MenuItem value={id} key={id}>{id}</MenuItem>
+            )
+          })}
           <MenuItem 
           value='All'
-          onClick={this.handleClick}>All</MenuItem>
+          onClick={this.handleClick}>Select Vendor</MenuItem>
         </Select>
         {this.state.indVdrOn ? 
         <PieGraphVendor vendorItems={this.state.newItems}/> :
