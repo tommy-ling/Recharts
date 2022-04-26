@@ -119,7 +119,7 @@ class LineGraph extends Component {
     const formatter = (value) => `${value}$`
     return (
       <div>
-      <button onClick={this.handleButtonClick}>Reset Vendor Filter</button>
+      <button className='LineGraph-reset' onClick={this.handleButtonClick}>Reset Vendor Filter</button>
       <ResponsiveContainer width="100%" aspect={3}>
         <LineChart
           width={600}

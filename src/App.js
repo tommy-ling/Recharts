@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import LineGraphs from './LineGraphs';
+import PieGraphs from './PieGraphs';
 
 class App extends Component {
   render() {
     return (
-      <LineGraphs />
+      <div>
+        <LineGraphs />
+        <PieGraphs />
+      </div>
       );
   }
 }

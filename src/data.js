@@ -117,26 +117,108 @@ const vmSoldByItem = [
     qty: 300,
     vendorId: 1
   }},
-  {item1: {
-    price: 25,
-    qty: 300
+  {item2: {
+    price: 15,
+    qty: 530,
+    vendorId: 4
   }},
-  {item1: {
-    price: 25,
-    qty: 300
+  {item3: {
+    price: 30,
+    qty: 215,
+    vendorId: 5
   }},
-  {item1: {
+  {item4: {
     price: 25,
-    qty: 300
+    qty: 200,
+    vendorId: 2
   }},
-  {item1: {
+  {item5: {
     price: 25,
-    qty: 300
+    qty: 330,
+    vendorId: 1
   }},
-  {item1: {
+  {item6: {
     price: 25,
-    qty: 300
+    qty: 300,
+    vendorId: 3
+  }},
+  {item7: {
+    price: 10,
+    qty: 750,
+    vendorId: 6
+  }},
+  {item8: {
+    price: 20,
+    qty: 450,
+    vendorId: 12
+  }},
+  {item9: {
+    price: 20,
+    qty: 300,
+    vendorId: 11
+  }},
+  {item10: {
+    price: 15,
+    qty: 250,
+    vendorId: 10
+  }},
+  {item11: {
+    price: 45,
+    qty: 150,
+    vendorId: 8
+  }},
+  {item12: {
+    price: 30,
+    qty: 450,
+    vendorId: 7
+  }},
+  {item13: {
+    price: 20,
+    qty: 500,
+    vendorId: 8
+  }},
+  {item14: {
+    price: 40,
+    qty: 100,
+    vendorId: 9
+  }},
+  {item15: {
+    price: 35,
+    qty: 400,
+    vendorId: 9
+  }},
+  {item16: {
+    price: 20,
+    qty: 440,
+    vendorId: 12
+  }},
+  {item17: {
+    price: 35,
+    qty: 100,
+    vendorId: 11
+  }},
+  {item18: {
+    price: 15,
+    qty: 700,
+    vendorId: 6
+  }},
+  {item19: {
+    price: 25,
+    qty: 350,
+    vendorId: 7
+  }},
+  {item20: {
+    price: 50,
+    qty: 300,
+    vendorId: 4
   }},
 ]
 
-export { vmExampleData, allData }
+const vmItemRev = vmSoldByItem.map(i => {
+  const price = Object.values(i)[0].price
+  const qty = Object.values(i)[0].qty
+  const key = Object.keys(i)[0]
+  return { name: [key][0], value: price*qty }
+})
+
+export { vmExampleData, allData, vmSoldByItem, vmItemRev }
