@@ -18,7 +18,7 @@ class LineGraphs extends Component {
     return (
       <div>
         <div className="LineGraphs-filter">
-          <span>Filter By</span>
+          <span>Filtered By</span>
           <button onClick={this.handleClick} value={this.state.btnValAll}>
             {this.state.btnValAll ? "All" : "Vendors"}
           </button>

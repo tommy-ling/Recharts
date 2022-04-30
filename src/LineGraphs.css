@@ -1,6 +1,6 @@
 .LineGraphs-filter {
-  color: white;
-  margin: 1.5rem
+  color: #d7e1ee;
+  margin: 1rem
 }
 
 .LineGraphs-filter button {
@@ -8,6 +8,7 @@
   height: 1.5rem;
   width: 4.5rem;
   border-radius: 10px;
+  background-color: #d7e1ee;
 }
 
 .LineGraphs-filter button:hover {

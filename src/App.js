@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import LineGraphs from './LineGraphs';
 import PieGraphs from './PieGraphs';
+import BarGraphs from './BarGraphs';
 
 class App extends Component {
   render() {
@@ -8,6 +9,7 @@ class App extends Component {
       <div>
         <LineGraphs />
         <PieGraphs />
+        <BarGraphs />
       </div>
       );
   }

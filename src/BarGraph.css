@@ -1,0 +1,18 @@
+.BarGraph {
+  margin-top: 1rem;
+}
+
+.BarGraph-heading {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.BarGraph-filterBtn {
+  width: 70px;
+  height: 25px;
+  background-color: #d7e1ee;
+}
+
+.BarGraph-filterBtn:hover {
+  cursor: pointer;
+}

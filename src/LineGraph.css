@@ -23,5 +23,10 @@
   margin-bottom: 10px;
   border-radius: 15px;
   width: 150px;
-  height: 25px
+  height: 25px;
+  background-color: #d7e1ee;
+}
+
+.LineGraph-reset:hover {
+  cursor: pointer;
 }

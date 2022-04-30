@@ -5,7 +5,7 @@ import { colors } from './color'
 
 class PieGraph extends Component {
   totalRevenueByVendor = vmItemRev.reduce((prevVal, currVal) => {
-    return prevVal + currVal.value
+    return prevVal + currVal.revenue
   }, 0)
   
   RADIAN = Math.PI / 180;
@@ -46,7 +46,7 @@ class PieGraph extends Component {
         <PieChart>
           <Pie 
           data={vmItemRev} 
-          dataKey="value"
+          dataKey="revenue"
           outerRadius={200} 
           innerRadius='40%'
           label={this.customizedLabel}

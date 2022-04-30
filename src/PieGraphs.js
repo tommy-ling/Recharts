@@ -24,8 +24,7 @@ class PieGraphs extends Component {
   render() {
     const vdrId = this.state.items.map(item => 
       Object.values(item)[0].vendorId
-      ).filter((id, idx, arr) => 
-      arr.indexOf(id) === idx
+      ).filter((id, idx, arr) => arr.indexOf(id) === idx
       ).sort((a,b) => a - b)
 
     return (

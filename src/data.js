@@ -218,7 +218,13 @@ const vmItemRev = vmSoldByItem.map(i => {
   const price = Object.values(i)[0].price
   const qty = Object.values(i)[0].qty
   const key = Object.keys(i)[0]
-  return { name: [key][0], value: price*qty }
+  return { name: [key][0], revenue: price*qty }
 })
 
-export { vmExampleData, allData, vmSoldByItem, vmItemRev }
+const vmItemQty = vmSoldByItem.map(i => {
+  const qty = Object.values(i)[0].qty
+  const key = Object.keys(i)[0]
+  return { name: [key][0], quantity: qty }
+})
+
+export { vmExampleData, allData, vmSoldByItem, vmItemRev, vmItemQty }
